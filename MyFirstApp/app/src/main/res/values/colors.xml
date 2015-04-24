@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="actionbar_text">#FF0000</color> <!-- RED -->
+    <color name="app_background">#10FFFFFF</color> <!-- WHITE -->
+
+</resources>
