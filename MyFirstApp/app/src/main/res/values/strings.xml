@@ -7,4 +7,6 @@
     <string name="title_activity_display_message">My Message</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_search">Search</string>
+    <string name="preference_file_key">APP_PREFERENCES</string>
+    <string name="last_selected_item">Last Selected Item</string>
 </resources>

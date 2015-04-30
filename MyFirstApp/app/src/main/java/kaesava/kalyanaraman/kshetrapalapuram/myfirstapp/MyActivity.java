@@ -1,7 +1,7 @@
 package kaesava.kalyanaraman.kshetrapalapuram.myfirstapp;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -10,12 +10,16 @@ import android.view.View;
 import android.widget.EditText;
 
 
-public class MyActivity extends ActionBarActivity {
+public class MyActivity extends Activity { //implements ListFragment.OnFragmentInteractionListener {
     public final static String EXTRA_MESSAGE = "kaesava.kalyanaraman.kshetrapalapuram.myfirstapp.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
+
+        //SharedPreferences sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        //SharedPreferences.Editor editor = sharedPref.edit();
+        //editor.putLong(getString(R.string.last_selected_item), 15);
+        //editor.commit();
     }
 
 
@@ -48,7 +52,18 @@ public class MyActivity extends ActionBarActivity {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.edit_message);
         String message = editText.getText().toString();
+        //SharedPreferences sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        //long defaultValue = getResources().getInteger(R.integer.last_selected_item_default);
+        //long selectedItem = sharedPref.getLong(getString(R.string.last_selected_item), defaultValue);
+        //message = message + " - " + Long.toString(selectedItem);
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
+
+//    @Override
+//    public void onFragmentInteraction(int id) {
+//        EditText editText = (EditText) findViewById(R.id.edit_message);
+//
+//        editText.setText(((Integer) id).toString());
+//    }
 }
